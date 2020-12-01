@@ -11,7 +11,8 @@ def expense_report():
         for i in data_list:
             for j in data_list[1:]:
                 for x in data_list[2:]:
-                    if i + j + x == 2020:          
+                    if i + j + x == 2020:
+                        print(i, j, x)          
                         return i * j * x
              
         
