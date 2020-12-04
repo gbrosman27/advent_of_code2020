@@ -24,20 +24,46 @@ def tree_finder():
 
     
         print(tree_counter)
-                
-
-# start at index 0 of first line.
-# go to next line index 3 and record if tree
-# go to next line index 6 and record if tree
-# go to next line index 9 and record if tree
-
-# keep dropping line and add 3 to the index. check if tree and add to counter. 
-# if end of line reached, repeat from index 0 of next line.
-
-
-            # Counts the trees in each line.
-            # tree_counter = sled_run.count('#')               
-            # print(tree_counter)
-                
+                                
 
 tree_finder()
+# 209
+
+# with open('data_files/day3_input.txt') as file:
+#     map = file.readlines()
+#     map = [ line.strip() for line in map]
+
+
+# treeCount = 0
+# row, col = 0,0
+
+# while row+1 < len(map):
+#     row +=1
+#     col +=3
+
+#     space = map[row][col % len(map[row])]
+#     if space == '#':
+#         treeCount +=1
+
+# print(treeCount)
+
+
+# slopes = [(1,1), (3,1), (5,1), (7,1), (1,2)]
+
+# total = 1
+
+# for slope in slopes:
+#     treeCount=0
+#     row, col = 0,0
+
+#     while row+1 < len(map):
+#         row += slope[1]
+#         col += slope[0]
+
+#         space = map[row][col % len(map[row])]
+#         if space  == '#':
+#             treeCount += 1
+
+#     total *= treeCount
+
+# print(total)
