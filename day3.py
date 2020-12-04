@@ -4,14 +4,27 @@ def tree_finder():
         # For each line in the data file, append the line as a string into the input_list.
         input_list = [line for line in data]
 
-        # Initialize a counter to count the trees in the path.
+        # Initialize variables
+        sled_run = []
+        index = 0
         tree_counter = 0
 
 
         # For the length of the input list, split the data to get each line as its own list.
-        for i in range(0, len(input_list)):
-            sled_run = input_list[i].split()[0]
-            print(sled_run)
+        for i in range(len(input_list)):
+            sled_run.append(input_list[i].split()[0])
+
+        for line in sled_run:
+            if line[index] == '#':
+                tree_counter += 1
+            if index == len(line) - 1:
+                index -= len(line) + 2
+            else:
+                index += 3
+
+    
+        print(tree_counter)
+                
 
 # start at index 0 of first line.
 # go to next line index 3 and record if tree
@@ -23,8 +36,8 @@ def tree_finder():
 
 
             # Counts the trees in each line.
-            tree_counter = sled_run.count('#')               
-            print(tree_counter)
+            # tree_counter = sled_run.count('#')               
+            # print(tree_counter)
                 
 
 tree_finder()
